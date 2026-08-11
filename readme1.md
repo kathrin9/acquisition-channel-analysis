@@ -15,26 +15,24 @@ This project builds a full analytical pipeline: from raw transactional data → 
  # Business Questions
 
  - What is a "High-Quality" Customer?
- 
-| Signal | Description |
 
-| Repurchase behavior| Does the customer come back for a 2nd, 3rd+ order? |
-| Price sensitivity| Do they buy at full price or only when a discount is applied? |
-| Time to repurchase| How quickly do they return after their first order? |
-| Product category| Do they buy high-margin categories (vitamins, supplements) or low-margin (generics)? |
-| Return/refund rate| Do they keep what they buy? |
+ Repurchase behavior: Does the customer come back for a 2nd, 3rd+ order? 
+ Price sensitivity: Do they buy at full price or only when a discount is applied? 
+ Time to repurchase: How quickly do they return after their first order? 
+ Product category: Do they buy high-margin categories (vitamins, supplements) or low-margin (generics)? 
+ Return/refund rate: Do they keep what they buy? 
 
  # What Do We Want to Know About Channels?
 
-| Question | Tables Needed |
+( Question -> Tables needed )
 
-| Which channel brings the most repeat buyers? | `sessions`, `orders`, `users` |
-| Which channel has the largest average basket size? | `sessions`, `orders`, `order_items` |
-| Which channel drives full-price vs discount purchases? | `orders`, `discounts` |
-| Which channel has the highest bounce rate? | `sessions` |
-| How many ad exposures are needed before a first purchase? | `ad_exposures` ⚠️ |
-| What is the CAC and ROAS per channel? | `marketing_costs`, `orders` |
-| Which channel produces customers with the highest CLV? | all tables |
+ Which channel brings the most repeat buyers? -> `sessions`, `orders`, `users` 
+ Which channel has the largest average basket size? -> `sessions`, `orders`, `order_items` 
+ Which channel drives full-price vs discount purchases? -> `orders`, `discounts` 
+ Which channel has the highest bounce rate? -> `sessions` 
+ How many ad exposures are needed before a first purchase? -> `ad_exposures` 
+ What is the CAC and ROAS per channel? -> `marketing_costs`, `orders` 
+ Which channel produces customers with the highest CLV? -> all tables 
 
  ---
  
@@ -62,7 +60,7 @@ sessions
 orders
 ├── order_id         PK
 ├── user_id          FK → users
-├── session_id       FK → sessions  ⚠️ CRITICAL JOIN
+├── session_id       FK → sessions 
 ├── total_amount
 ├── discount_amount
 ├── created_at
@@ -150,8 +148,14 @@ Each customer receives a composite score (0–100) based on the following dimens
 
  #  Analysis Plan
 
- Phase 1 — Data Validation
-- [ ] Verify `orders.session_id` FK completeness
+**Phase 1 — Data Validation** (`01_data_validation.sql`)
+Explore each table independently before joining anything.
+- [ ] Row counts per table
+- [ ] NULL values per column
+- [ ] Duplicate check
+- [ ] Date range validation
+- [ ] Foreign key completeness — especially `orders.session_id → sessions`
+- [ ] UTM coverage: % of sessions with `utm_source` populated
 - [ ] Check UTM coverage in `sessions` (% of sessions with utm_source populated)
 - [ ] Identify null / unknown channel traffic
 - [ ] Validate date ranges across all tables
