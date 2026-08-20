@@ -1,0 +1,16 @@
+discount_code,type,value,valid_from,valid_to,channel
+WELCOME10,percentage,10,2023-06-01,2024-12-31,all
+SPRING20,percentage,20,2024-03-01,2024-04-15,google
+SUMMER15,percentage,15,2024-06-01,2024-07-15,facebook
+EMAIL5,fixed,5,2023-06-01,2024-12-31,email
+INSTA25,percentage,25,2024-02-01,2024-02-28,instagram
+FLASH30,percentage,30,2024-05-10,2024-05-12,all
+NEWYEAR10,fixed,10,2024-01-01,2024-01-15,all
+LOYALTY5,fixed,5,2023-06-01,2024-12-31,organic
+BRAND10,percentage,10,2023-09-01,2023-12-31,direct
+RETARGET15,percentage,15,2024-04-01,2024-06-30,facebook
+VIP20,percentage,20,2023-11-01,2024-12-31,all
+WINTER10,fixed,10,2023-12-01,2024-02-28,all
+BROKEN5,fixed,5,2024-05-01,2024-03-01,email
+AUTUMN10,percentage,10,2023-09-15,2023-11-30,google
+GOOGLE12,percentage,12,2024-01-15,2024-12-31,google
