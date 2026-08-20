@@ -1,0 +1,53 @@
+product_id,name,category,brand,base_price,margin_pct
+1,Vitamin C 1000mg,vitamins,ActiveLife,11.11,0.18
+2,Vitamin D3 2000IU,vitamins,,31.76,0.19
+3,Multivitamin Complex,vitamins,DermaCare,18.37,0.42
+4,B-Complex Forte,vitamins,NutriPlus,12.34,0.19
+5,Vitamin E Capsules,vitamins,BioForm,13.14,0.35
+6,Omega-3 Fish Oil,vitamins,HealWell,35.54,0.34
+7,Iron Supplement,vitamins,DermaCare,42.07,0.23
+8,Zinc Tablets,vitamins,ActiveLife,17.61,0.23
+9,Magnesium Citrate,vitamins,DermaCare,36.33,0.49
+10,Folic Acid,vitamins,,17.69,0.36
+11,Whey Protein Vanilla,supplements,HealWell,30.97,0.47
+12,Collagen Peptides,supplements,HealWell,13.76,0.26
+13,Probiotic Complex,supplements,BioForm,19.52,0.27
+14,Creatine Monohydrate,supplements,HealWell,38.08,0.28
+15,BCAA Powder,supplements,ActiveLife,21.72,0.31
+16,Melatonin 5mg,supplements,Vitalia,4.73,0.53
+17,Ashwagandha Extract,supplements,DermaCare,43.73,0.29
+18,Turmeric Curcumin,supplements,Vitalia,43.99,0.46
+19,Fiber Supplement,supplements,HealWell,37.65,0.23
+20,Electrolyte Powder,supplements,BioForm,16.44,0.3
+21,Hyaluronic Acid Serum,skincare,NutriPlus,21.81,0.3
+22,Retinol Night Cream,skincare,,36.8,0.4
+23,Vitamin C Serum,skincare,NutriPlus,39.18,0.19
+24,SPF50 Sunscreen,skincare,,11.0,0.44
+25,Gentle Facial Cleanser,skincare,ActiveLife,43.06,0.53
+26,Niacinamide Serum,skincare,,32.36,0.51
+27,Hydrating Moisturizer,skincare,ActiveLife,14.62,0.54
+28,Anti-Aging Eye Cream,skincare,BioForm,6.9,0.17
+29,Salicylic Acid Toner,skincare,HealWell,15.68,0.3
+30,Aloe Vera Gel,skincare,PureLeaf,9.0,0.2
+31,Pain Relief Tablets,OTC,ActiveLife,17.64,0.46
+32,Cold & Flu Relief,OTC,HealWell,37.88,0.5
+33,Allergy Relief 24h,OTC,,27.75,0.37
+34,Antacid Tablets,OTC,HealWell,14.43,0.38
+35,Cough Syrup,OTC,Vitalia,27.05,0.48
+36,Nasal Spray,OTC,BioForm,10.19,0.46
+37,Throat Lozenges,OTC,,43.27,0.29
+38,Fever Reducer,OTC,BioForm,34.76,0.24
+39,Motion Sickness Tablets,OTC,BioForm,23.47,0.33
+40,First Aid Kit,OTC,HealWell,12.56,0.54
+41,Electric Toothbrush,personal_care,Vitalia,14.84,0.45
+42,Hand Sanitizer Gel,personal_care,ActiveLife,10.18,0.41
+43,Body Lotion,personal_care,Vitalia,20.55,0.34
+44,Shampoo Sensitive Scalp,personal_care,BioForm,38.18,0.17
+45,Deodorant Roll-on,personal_care,Vitalia,5.16,0.32
+46,Lip Balm SPF15,personal_care,BioForm,43.37,0.5
+47,Nail Care Kit,personal_care,BioForm,36.5,0.35
+48,Baby Wipes,personal_care,PureLeaf,30.19,0.44
+49,Feminine Care Pack,personal_care,DermaCare,43.96,0.46
+50,Foot Cream,personal_care,PureLeaf,36.84,0.49
+4,B-Complex Forte,vitamins,NutriPlus,12.34,0.19
+28,Anti-Aging Eye Cream,skincare,BioForm,6.9,0.17
