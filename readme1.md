@@ -161,3 +161,40 @@ Explore each table independently before joining anything.
 - [ ] Value sanity checks — negative or zero 
 - [ ] Attribution timing consistency 
 - [ ] `marketing_costs` coverage — all channels and the full date range present relative to `sessions` activity
+
+### Phase 2 — Customer Scoring (`02_customer_scoring.sql`)
+Using only the `orders` table, compute the quality score for every customer.
+- [ ] Decide and document which `status` values count as a "real" purchase (exclude `cancelled` / `refunded` from repurchase, revenue, and full-price calculations)
+- [ ] Normalize `discount_amount` (`COALESCE(discount_amount, 0)`) before computing full-price ratio, to avoid treating NULL as missing data instead of "no discount"
+- [ ] Repurchase flag and count per user
+- [ ] Full-price ratio per user
+- [ ] Time to 2nd purchase per user
+  - [ ] Decide how single-purchase users are handled in the final score (NULL shouldn't act as a penalty)
+- [ ] Final weighted score (0–100)
+- [ ] Tier assignment (Platinum / Gold / Silver / Bronze)
+
+### Phase 3 — Channel Attribution (`03_channel_attribution.sql`)
+Join customer scores back to acquisition channel via `sessions` (and `ad_exposures` for multi-touch).
+- [ ] Decide how sessions with missing/NULL `utm_source` (direct traffic) are bucketed in channel group-bys
+- [ ] First-touch channel per customer (via `sessions`)
+- [ ] Multi-touch view using `ad_exposures` — compare first-touch vs last-touch vs exposure-based attribution
+- [ ] Quality tier distribution by channel
+- [ ] Average score, basket size, and repeat rate per channel
+- [ ] New customers acquired per channel (needed before CAC — CAC uses *new* customers, not all orders)
+- [ ] CAC and ROAS per channel using `marketing_costs`
+
+### Phase 4 — Bounce Analysis (`04_bounce_analysis.sql`)
+- [ ] Bounce rate per channel and device
+- [ ] Session duration per channel — overall vs. non-bounced only (bounced sessions have `duration_s = 0` by definition and will skew the overall average)
+
+### Phase 5 — CLV by Channel (`05_clv_by_channel.sql`)
+- [ ] Apply the same `status` filter as Phase 2 (exclude `cancelled` / `refunded`) so CLV isn't inflated
+- [ ] Customer Lifetime Value per channel
+- [ ] Revenue concentration (what % of revenue comes from top 20% of customers per channel)
+
+### Phase 6 — Dashboard & Recommendations
+- [ ] Build channel comparison dashboard
+- [ ] Identify top-performing channel for quality customers
+- [ ] Identify channels with high volume but low quality
+- [ ] Budget reallocation recommendations
+- [ ] Document data limitations carried over from Phase 1 (e.g. % of orders excluded from attribution due to orphan `session_id`, % of sessions with unknown channel) so gaps in the numbers are explained, not hidden
