@@ -155,7 +155,9 @@ Explore each table independently before joining anything.
 - [ ] Duplicate check
 - [ ] Date range validation
 - [ ] Foreign key completeness — especially `orders.session_id → sessions`
+   - [ ] Also check: `order_items.order_id → orders`, `order_items.product_id → products`, `sessions.user_id → users`, `ad_exposures.user_id → users`
 - [ ] UTM coverage: % of sessions with `utm_source` populated
-- [ ] Check UTM coverage in `sessions` (% of sessions with utm_source populated)
-- [ ] Identify null / unknown channel traffic
-- [ ] Validate date ranges across all tables
+- [ ] Domain / categorical value validation 
+- [ ] Value sanity checks — negative or zero 
+- [ ] Attribution timing consistency 
+- [ ] `marketing_costs` coverage — all channels and the full date range present relative to `sessions` activity
