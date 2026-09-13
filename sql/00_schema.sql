@@ -1,6 +1,3 @@
-
-
-
 DROP TABLE IF EXISTS ad_exposures;
 DROP TABLE IF EXISTS discounts;
 DROP TABLE IF EXISTS marketing_costs;
