@@ -148,14 +148,14 @@ Each customer receives a composite score (0–100) based on the following dimens
 
  #  Analysis Plan
 
-**Phase 0 — Database Setup** (`00_schema.sql`)
+### Phase 0 — Database Setup (`00_schema.sql`)
 Create the empty schema before loading any data.
 - [ ] Create all 8 tables (`users`, `sessions`, `orders`, `order_items`, `products`, `marketing_costs`, `discounts`, `ad_exposures`)
 - [ ] No `PRIMARY KEY` / `FOREIGN KEY` constraints applied at this stage
 - [ ] Load CSV source files into each table
 - [ ] Verify row counts match the source files after import
 
-**Phase 1 — Data Validation** (`01_data_validation.sql`)
+### Phase 1 — Data Validation (`01_data_validation.sql`)
 Explore each table independently before joining anything.
 - [ ] Row counts per table
 - [ ] NULL values per column
