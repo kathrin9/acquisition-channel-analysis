@@ -1,0 +1,10 @@
+"table_name","row_count"
+users,500
+sessions,1505
+orders,519
+order_items,1279
+products,52
+marketing_costs,1644
+discounts,15
+ad_exposures,953
+TOTAL,6467
