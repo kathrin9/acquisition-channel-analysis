@@ -23,7 +23,8 @@ CREATE TABLE sessions (
     utm_campaign TEXT,
     bounced      BOOLEAN,
     duration_s   INTEGER,
-    device       TEXT
+    device       TEXT,
+    started_at   TIMESTAMP
 );
 
 CREATE TABLE orders (
