@@ -16,13 +16,13 @@ FROM users
 UNION ALL
 
 SELECT
-    'sessions',
+    'marketing_costs',
     COUNT(*),
-    COUNT(session_id),
-    COUNT(DISTINCT session_id),
-    COUNT(*) - COUNT(session_id),
-    COUNT(session_id) - COUNT(DISTINCT session_id)
-FROM sessions 
+    COUNT(campaign_id),
+    COUNT(DISTINCT campaign_id),
+    COUNT(*) - COUNT(campaign_id),
+    NULL
+FROM marketing_costs
 
 UNION ALL  
 
